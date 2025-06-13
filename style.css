@@ -1,4 +1,4 @@
-/* style.css - Updated for better layout and aesthetics */
+/* style.css - Light Theme with Bluish Tint - Mobile Friendly */
 
 * {
   margin: 0;
@@ -8,42 +8,77 @@
 }
 
 body {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
+  background-color: #f0f4f8; /* soft off-white with a bluish tint */
+  color: #222; /* dark text for contrast */
   line-height: 1.7;
-  font-size: 1.3rem; /* increased overall font size */
+  font-size: 1rem; /* Reduced base font size for mobile */
 }
 
-header {
-  background-color: #121212;
-  color: #ffffff;
-  padding: 1rem 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+/* Mobile-first responsive design */
+.navbar-container {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Logo & Heading Section */
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0.5rem 0;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
 }
 
 .logo {
-  height: 45px; /* smaller */
+  height: 35px; /* Smaller logo for mobile */
   width: auto;
 }
 
 .header-container h1 {
-  font-size: 2.0rem; /* smaller */
-  flex-grow: 1;
-  text-align: left;
-  margin-right: 45px; /* spacing to center text visually */
+  font-size: 1.2rem; /* Smaller font for mobile */
+  color: #003049;
+  text-align: center;
+  margin: 0;
 }
 
-/* CTA Button Below Heading */
+/* Mobile Navigation */
+.navbar {
+  background-color: #e0e8f0;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.navbar a {
+  color: #003049;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: #cbd6e2;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: block; /* Full width on mobile */
+  font-size: 0.9rem;
+}
+
+.navbar a:hover {
+  background-color: #aac4db;
+}
+
+/* CTA Button */
 .cta-container {
   display: flex;
   justify-content: center;
@@ -51,50 +86,18 @@ header {
 }
 
 .cta-button {
-  background-color: #0077b6; /* darker blue */
+  background-color: #0077b6;
   color: white;
-  padding: 0.6rem 1.4rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  font-size: 1rem;
 }
 
 .cta-button:hover {
   background-color: #0096c7;
-}
-
-/* Navbar Styles */
-.navbar {
-  background-color: #1a1a1a;
-  padding: 0.6rem 1rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.navbar a {
-  color: #f1f1f1;
-  text-decoration: none;
-  font-weight: 500;
-  background-color: #2c2c2c;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.navbar a:hover {
-  background-color: #444;
 }
 
 /* Headings */
@@ -103,13 +106,14 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 2.4rem;
-  color: #0077b6; /* darker blue */
+  font-size: 1.8rem; /* Smaller for mobile */
+  color: #0077b6;
+  text-align: center;
 }
 
 h3 {
-  font-size: 1.5rem;
-  color: #00a4d6;
+  font-size: 1.3rem; /* Smaller for mobile */
+  color: #005f86;
   border-left: 4px solid #0077b6;
   padding-left: 0.6rem;
   margin-top: 1.5rem;
@@ -117,24 +121,32 @@ h3 {
 
 /* Sections */
 section {
-  padding: 2rem;
-  max-width: 900px;
-  margin: 2rem auto;
-  border-bottom: 1px solid #333;
-  background-color: #1b1b1b;
-  border-radius: 10px;
+  padding: 1.5rem 1rem; /* Reduced padding for mobile */
+  max-width: 100%; /* Full width on mobile */
+  margin: 1rem 0.5rem; /* Reduced margins */
+  border-bottom: 1px solid #ccc;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 p {
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1rem; /* Smaller font for mobile */
+  color: #222;
+  line-height: 1.6;
 }
 
 /* Lists */
 ul {
   list-style-type: disc;
-  padding-left: 1.5rem;
+  padding-left: 1.2rem;
   margin-bottom: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem; /* Add spacing between list items */
+  font-size: 0.95rem;
 }
 
 ul li::marker {
@@ -144,17 +156,17 @@ ul li::marker {
 /* Footer */
 footer {
   text-align: center;
-  background-color: #121212;
-  color: #ccc;
+  background-color: #e6edf5;
+  color: #555;
   padding: 1rem;
-  font-size: 1.1rem;
-  margin-top: 3rem;
-  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
 }
 
 /* General Links */
 a {
-  color: #0096c7;
+  color: #0077b6;
   text-decoration: none;
 }
 
@@ -162,3 +174,171 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Tablet Styles (768px and up) */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+  
+  .header-container {
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0.5rem 2rem;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .header-container h1 {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+  
+  .navbar ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .navbar a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+  
+  section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 1.5rem auto;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+  
+  ul li {
+    font-size: 1rem;
+  }
+  
+  footer {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.3rem;
+  }
+  
+  .header-container {
+    padding: 0.5rem 2rem;
+  }
+  
+  .logo {
+    height: 45px;
+  }
+  
+  .header-container h1 {
+    font-size: 2rem;
+    margin-right: 45px;
+  }
+  
+  .navbar {
+    padding: 0.6rem 1rem;
+  }
+  
+  .navbar ul {
+    gap: 1.5rem;
+  }
+  
+  .navbar a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  h2 {
+    font-size: 2.4rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+  }
+  
+  p {
+    font-size: 1.3rem;
+  }
+  
+  ul li {
+    font-size: 1.1rem;
+  }
+  
+  footer {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large Desktop Styles (1200px and up) */
+@media (min-width: 1200px) {
+  .header-container {
+    padding: 0.5rem 3rem;
+  }
+  
+  section {
+    padding: 2.5rem;
+    max-width: 1000px;
+  }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (max-width: 767px) {
+  .navbar a {
+    min-height: 44px; /* Minimum touch target size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cta-button {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Improve readability on small screens */
+  section {
+    margin: 0.5rem;
+    border-radius: 6px;
+  }
+  
+  /* Better spacing for mobile */
+  h2, h3 {
+    margin-top: 1rem;
+  }
+  
+  /* Optimize list spacing */
+  ul {
+    padding-left: 1rem;
+  }
+  
+  ul li {
+    margin-bottom: 0.3rem;
+  }
+}
